@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.azkifairuz.genshin_impact_character"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.azkifairuz.genshin_impact_character"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

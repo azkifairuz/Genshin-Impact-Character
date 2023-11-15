@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Genshin-Impact-Character</string>
+    <string name="the_pretties_character_of_the_year">The Pretties Character Of The Year</string>
+    <string name="content_prettiest_character_banner">Prettiest Character Banner</string>
+    <string name="eula_lawrance">Eula Lawrance</string>
+    <string name="mondstadt">Mondstadt</string>
 </resources>
