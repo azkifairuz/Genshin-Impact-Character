@@ -1,4 +1,4 @@
-package com.azkifairuz.genshin_impact_character.Screen
+package com.azkifairuz.genshin_impact_character.ui.Screen
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview

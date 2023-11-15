@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.azkifairuz.genshin_impact_character.Screen.Home
+import com.azkifairuz.genshin_impact_character.ui.Screen.Home
 import com.azkifairuz.genshin_impact_character.component.Banner
 import com.azkifairuz.genshin_impact_character.ui.theme.GenshinImpactCharacterTheme
 

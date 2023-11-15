@@ -16,4 +16,16 @@ class CharacterRepository {
             it.id == rewardId
         }
     }
+
+    companion object {
+        @Volatile
+        private var instance: CharacterRepository? = null
+
+        fun getInstance(): CharacterRepository =
+            instance ?: synchronized(this) {
+                CharacterRepository().apply {
+                    instance = this
+                }
+            }
+    }
 }
