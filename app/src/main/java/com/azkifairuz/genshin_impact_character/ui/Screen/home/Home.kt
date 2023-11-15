@@ -1,4 +1,4 @@
-package com.azkifairuz.genshin_impact_character.ui.Screen
+package com.azkifairuz.genshin_impact_character.ui.Screen.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.lazy.LazyColumn
