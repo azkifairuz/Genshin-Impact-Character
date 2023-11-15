@@ -29,9 +29,7 @@ fun Banner(
     modifier: Modifier = Modifier
 ) {
     
-    Column(
-        modifier.padding(16.dp)
-    ) {
+    Column() {
         SectionText(title = stringResource(R.string.the_pretties_character_of_the_year))
         Card(
             colors = CardDefaults.cardColors(

@@ -35,7 +35,6 @@ private val LightColorScheme = lightColorScheme(
     onPrimaryContainer = Blue10,
     secondary = Yellow30,
     tertiary = Blue40,
-    onSecondary = Yellow10,
     secondaryContainer = Yellow50,
 
     /* Other default colors to override

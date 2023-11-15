@@ -30,7 +30,6 @@ fun CharacterCard(
     image: Int,
     detail: String,
     region: String,
-    onClick: (String) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     Card(
@@ -43,7 +42,7 @@ fun CharacterCard(
             .clickable { }
     ) {
         Row(
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
             modifier = modifier
                 .padding(8.dp)
         ) {
@@ -63,7 +62,7 @@ fun CharacterCard(
                 Column {
                     Text(
                         text = name,
-                        style = MaterialTheme.typography.headlineLarge
+                        style = MaterialTheme.typography.headlineMedium
                     )
                     Text(
                         text = detail,
@@ -83,7 +82,7 @@ fun CharacterCard(
                     Text(
                         text = region,
                         color = MaterialTheme.colorScheme.onSecondary,
-                        style = MaterialTheme.typography.labelLarge,
+                        style = MaterialTheme.typography.labelSmall,
                     )
 
                 }
