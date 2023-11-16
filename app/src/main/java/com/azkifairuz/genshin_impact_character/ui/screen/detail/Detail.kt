@@ -35,9 +35,7 @@ fun DetailContent(
     element: String,
     modifier: Modifier = Modifier
 ) {
-    Column(
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
+    Column() {
         Image(
             painter = painterResource(id = image),
             contentDescription = null,
@@ -52,7 +50,7 @@ fun DetailContent(
         ) {
             SectionText(title = name)
             Row(
-                horizontalArrangement = Arrangement.spacedBy(6.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 LabelBadge(
                     label = region,
