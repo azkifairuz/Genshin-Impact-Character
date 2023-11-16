@@ -71,21 +71,12 @@ fun CharacterCard(
                         style = MaterialTheme.typography.bodyLarge
                     )
                 }
-                Box(
-                    modifier = modifier
-                        .background(
-                            MaterialTheme.colorScheme.secondary,
-                            shape = RoundedCornerShape(50.dp)
-                        )
-                        .padding(5.dp)
-                ) {
-                    Text(
-                        text = region,
-                        color = MaterialTheme.colorScheme.onSecondary,
-                        style = MaterialTheme.typography.labelSmall,
-                    )
+                LabelBadge(
+                    label = region,
+                    bgColor = MaterialTheme.colorScheme.secondary,
+                    textColor =  MaterialTheme.colorScheme.onSecondary
+                )
 
-                }
             }
         }
     }

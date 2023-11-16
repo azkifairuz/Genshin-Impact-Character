@@ -2,32 +2,37 @@ package com.azkifairuz.genshin_impact_character.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ElementLabel(
+fun LabelBadge(
     label: String,
-    color: Color,
+    bgColor: Color,
+    textColor: Color,
     modifier: Modifier = Modifier
 ) {
     Box(
+        contentAlignment = Alignment.Center,
         modifier = modifier
             .background(
-                MaterialTheme.colorScheme.secondary,
-                shape = RoundedCornerShape(50.dp)
+                bgColor,
+                shape = RoundedCornerShape(22.dp)
             )
-            .padding(5.dp)
+            .padding(6.dp)
+            .defaultMinSize(minWidth = 52.dp)
     ) {
         Text(
             text = label,
-            color = color,
+            color = textColor,
             style = MaterialTheme.typography.labelSmall,
         )
 
