@@ -13,7 +13,7 @@ data class Character(
     val listCharacter = listOf(
         Character(1,R.drawable.eula, "Eula Lawrance", "Mondstadt","Eula Seorang keturunan bangsawan yang dijuluki Spindrift Knight dan selalu ada di medan pertempuran.\n" +
                 "Lahir sebagai keturunan bangsawan yang menanggung beban dosa pendahulunya, Eula memerlukan suatu keterampilan khusus untuk dapat hidup damai di bawah naungan prasangka. Oleh sebab itu, Eula sanggup memutuskan hubungan dengan klan-nya dan menjadi Spindrift Knight yang hebat, lalu memburu musuh-musuh Mondstadt di luar sebagai bentuk \"pembalasan dendam\" dirinya yang khas.","cryo"),
-        Character(2,R.drawable.venti,"Venti","Mondstadt","Seorang penyair yang datang bersama angin yang tidak diketahui asal-usulnya. Terkadang menyanyikan lagu yang teramat tua, dan terkadang menyanyikan lagu baru yang tidak pernah didengar.","anem"),
+        Character(2,R.drawable.venti,"Venti","Mondstadt","Seorang penyair yang datang bersama angin yang tidak diketahui asal-usulnya. Terkadang menyanyikan lagu yang teramat tua, dan terkadang menyanyikan lagu baru yang tidak pernah didengar.","anemo"),
         Character(3,R.drawable.keqing,"Keqing","Liyue","Yuheng dari Liyue Qixing, dia memiliki banyak hal yang ingin dikatakan mengenai Rex Lapis, sang pemimpin Liyue —— dan pada kenyataannya, para dewa mengagumi orang-orang sepertinya.","electro"),
         Character(4,R.drawable.raiden,"Raiden Shogun","Inazuma","Raiden Shogun — perwujudan petir yang paling agung dan menakutkan di dunia, penguasa tertinggi Inazuma Shogunate.\n" +
                 "Dengan memegang kekuatan petir, dia terus mengejar keabadian seorang diri.","electro"),

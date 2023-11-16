@@ -24,7 +24,7 @@ import com.azkifairuz.genshin_impact_character.ui.ViewModelFactory
 import com.azkifairuz.genshin_impact_character.ui.common.UiState
 
 @Composable
-fun Home(
+fun HomeScreen(
     homeViewModel: HomeViewModel = viewModel(
         factory = ViewModelFactory(Injection.provideRepository())
     ),

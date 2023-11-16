@@ -29,7 +29,7 @@ import com.azkifairuz.genshin_impact_character.ui.ViewModelFactory
 import com.azkifairuz.genshin_impact_character.ui.common.UiState
 
 @Composable
-fun Detail(
+fun DetailScreen(
     characterId: Int,
     detailViewModel: DetailViewModel = viewModel(
         factory = ViewModelFactory(Injection.provideRepository())
@@ -71,6 +71,7 @@ fun DetailContent(
     modifier: Modifier = Modifier
 ) {
     Column() {
+        SectionText(title = name,modifier.padding(16.dp))
         Image(
             painter = painterResource(id = image),
             contentDescription = null,
@@ -83,7 +84,7 @@ fun DetailContent(
             verticalArrangement = Arrangement.spacedBy(12.dp),
             modifier = modifier.padding(16.dp)
         ) {
-            SectionText(title = name)
+
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {

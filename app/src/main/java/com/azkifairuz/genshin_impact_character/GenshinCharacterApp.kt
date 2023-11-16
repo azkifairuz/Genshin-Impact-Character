@@ -17,19 +17,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.capitalize
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.azkifairuz.genshin_impact_character.ui.navigation.Screen
-import com.azkifairuz.genshin_impact_character.ui.screen.home.Home
+import com.azkifairuz.genshin_impact_character.ui.screen.detail.DetailScreen
+import com.azkifairuz.genshin_impact_character.ui.screen.home.HomeScreen
 import com.azkifairuz.genshin_impact_character.ui.screen.profile.ProfileScreen
 import java.util.Locale
 
@@ -48,16 +50,16 @@ fun GenshinCharacterApp(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
                     actionIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
-                    navigationIconContentColor =MaterialTheme.colorScheme.onPrimaryContainer
+                    navigationIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer
                 ),
                 title = {
                     if (currentRoute != null) {
                         Text(
-                            text = currentRoute.replaceFirstChar {
+                            text = if (currentRoute != Screen.DetailCharacter.route) currentRoute.replaceFirstChar {
                                 if (it.isLowerCase()) it.titlecase(
                                     Locale.getDefault()
                                 ) else it.toString()
-                            },
+                            } else stringResource(R.string.detail),
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis,
                             fontWeight = FontWeight.Bold,
@@ -81,7 +83,7 @@ fun GenshinCharacterApp(
                 actions = {
                     if (currentRoute != Screen.Profile.route) {
                         IconButton(onClick = {
-                            navController.navigate(Screen.Profile.route){
+                            navController.navigate(Screen.Profile.route) {
                                 popUpTo(navController.graph.findStartDestination().id) {
                                     saveState = true
                                 }
@@ -100,14 +102,14 @@ fun GenshinCharacterApp(
 
         },
 
-    ) { innerPadding ->
+        ) { innerPadding ->
         NavHost(
             navController = navController,
             startDestination = Screen.Home.route,
             modifier = modifier.padding(innerPadding)
         ) {
-            composable(Screen.Home.route){
-                Home(
+            composable(Screen.Home.route) {
+                HomeScreen(
                     navigateToDetail = { characterId ->
                         navController.navigate(Screen.DetailCharacter.createRoute(characterId = characterId))
                     }
@@ -115,6 +117,13 @@ fun GenshinCharacterApp(
             }
             composable(Screen.Profile.route) {
                 ProfileScreen()
+            }
+            composable(
+                route = Screen.DetailCharacter.route,
+                arguments = listOf(navArgument("characterId") { type = NavType.IntType })
+            ) {
+                val id = it.arguments?.getInt("characterId") ?: 1
+                DetailScreen(characterId = id)
             }
         }
 
