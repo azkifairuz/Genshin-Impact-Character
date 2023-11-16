@@ -23,11 +23,11 @@ class CharacterRepository {
             }
         }
     }
-    fun getAllRewards(): Flow<List<Character>> {
+    fun getAllCharacter(): Flow<List<Character>> {
         return flowOf(character)
     }
 
-    fun getOrderRewardById(rewardId: Int): Character {
+    fun getCharacterById(rewardId: Int): Character {
         return character.first {
             it.id == rewardId
         }

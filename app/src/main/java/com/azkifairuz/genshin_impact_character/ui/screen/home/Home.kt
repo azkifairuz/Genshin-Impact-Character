@@ -15,6 +15,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.azkifairuz.genshin_impact_character.R
 import com.azkifairuz.genshin_impact_character.component.Banner
 import com.azkifairuz.genshin_impact_character.component.CharacterCard
+import com.azkifairuz.genshin_impact_character.component.ErrorAllert
 import com.azkifairuz.genshin_impact_character.component.LoadingComponent
 import com.azkifairuz.genshin_impact_character.component.SectionText
 import com.azkifairuz.genshin_impact_character.di.Injection
@@ -47,7 +48,9 @@ fun Home(
                 }
             }
 
-            is UiState.Error -> {}
+            is UiState.Error -> {
+                ErrorAllert(msg = stringResource(R.string.failed_get_character))
+            }
         }
     }
 

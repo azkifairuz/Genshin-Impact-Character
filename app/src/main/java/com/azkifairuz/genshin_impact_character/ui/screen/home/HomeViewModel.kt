@@ -19,12 +19,12 @@ class HomeViewModel(
 
     fun getAllRewards() {
         viewModelScope.launch {
-            repository.getAllRewards()
+            repository.getAllCharacter()
                 .catch {
                     _uiState.value = UiState.Error(it.message.toString())
                 }
-                .collect { orderRewards ->
-                    _uiState.value = UiState.Success(orderRewards)
+                .collect { character ->
+                    _uiState.value = UiState.Success(character)
                 }
         }
     }
