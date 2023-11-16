@@ -1,4 +1,4 @@
-package com.azkifairuz.genshin_impact_character.ui.Screen.home
+package com.azkifairuz.genshin_impact_character.ui.screen.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

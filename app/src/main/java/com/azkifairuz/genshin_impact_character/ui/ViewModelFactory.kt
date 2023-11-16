@@ -3,8 +3,8 @@ package com.azkifairuz.genshin_impact_character.ui
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.azkifairuz.genshin_impact_character.data.CharacterRepository
-import com.azkifairuz.genshin_impact_character.ui.Screen.detail.DetailViewModel
-import com.azkifairuz.genshin_impact_character.ui.Screen.home.HomeViewModel
+import com.azkifairuz.genshin_impact_character.ui.screen.detail.DetailViewModel
+import com.azkifairuz.genshin_impact_character.ui.screen.home.HomeViewModel
 
 class ViewModelFactory(private val repository: CharacterRepository) :
     ViewModelProvider.NewInstanceFactory() {
