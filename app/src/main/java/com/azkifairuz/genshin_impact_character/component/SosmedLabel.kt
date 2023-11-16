@@ -41,13 +41,14 @@ fun SosmedLabel(
             horizontalArrangement = Arrangement.spacedBy(5.dp),
             verticalAlignment = Alignment.CenterVertically,
             modifier = modifier
-                .background(color = Color.LightGray, shape = RoundedCornerShape(6.dp))
+                .background(color = MaterialTheme.colorScheme.primaryContainer, shape = RoundedCornerShape(6.dp))
                 .padding(8.dp)
                 .fillMaxWidth()
         ) {
             Icon(painter = painterResource(id = icon), contentDescription = "icon")
             Text(
                 text = subtitle,
+                color = MaterialTheme.colorScheme.onPrimaryContainer,
                 style = MaterialTheme.typography.titleSmall,
             )
         }

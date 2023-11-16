@@ -42,8 +42,8 @@ fun ProfileScreen(
                 .height(250.dp)
         ) {
             Image(
-                painter = painterResource(id = R.drawable.profile_banner),
-                contentDescription = "profile_banner",
+                painter = painterResource(id = R.drawable.eula_banner),
+                contentDescription = stringResource(R.string.desc_profile_banner),
                 contentScale = ContentScale.Crop,
                 colorFilter = ColorFilter.tint(color = Color.Black, BlendMode.Lighten),
                 modifier = modifier
@@ -71,32 +71,33 @@ fun ProfileScreen(
                 modifier = modifier.padding(10.dp)
             ) {
                 SosmedLabel(
-                    title = "Email",
-                    subtitle = "azkiajmal@gmail.com",
+                    title = stringResource(R.string.email),
+                    subtitle = stringResource(R.string.azkiajmal_gmail_com),
                     icon = R.drawable.ic_email
                 )
                 SosmedLabel(
-                    title = "Github",
-                    subtitle = "azkifairuz",
+                    title = stringResource(R.string.github),
+                    subtitle = stringResource(R.string.azkifairuz),
                     icon = R.drawable.ic_github
                 )
                 SosmedLabel(
-                    title = "LinkedIn",
-                    subtitle = "azkia ajmal fairuz",
+                    title = stringResource(R.string.linkedin),
+                    subtitle = stringResource(R.string.my_name),
                     icon = R.drawable.ic_linkedin
                 )
                 Box(
                     contentAlignment = Alignment.Center,
                     modifier = modifier
-                        .padding(8.dp)
                         .background(
                             color = MaterialTheme.colorScheme.primary,
                             shape = RoundedCornerShape(6.dp)
                         )
+                        .padding(8.dp)
+                        .height(30.dp)
                         .fillMaxWidth()
                 ) {
                     Text(
-                        text = "Thanks For Come To My Bio",
+                        text = stringResource(R.string.thanks_for_come_to_my_bio),
                         color = MaterialTheme.colorScheme.onPrimary,
                         style = MaterialTheme.typography.titleSmall
                     )

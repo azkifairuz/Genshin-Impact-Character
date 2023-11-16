@@ -38,8 +38,7 @@ fun CharacterCard(
             contentColor = MaterialTheme.colorScheme.onPrimaryContainer
         ),
         modifier = modifier
-            .padding(16.dp)
-            .clickable { }
+            .padding(18.dp)
     ) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(12.dp),

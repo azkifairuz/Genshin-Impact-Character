@@ -7,4 +7,13 @@
     <string name="genshin_impact_character">Genshin Impact Character</string>
     <string name="my_name">Azkia Ajmal Fairuz</string>
     <string name="about_me">I\'m a Front End Developer with 1 years of profesional experience</string>
+    <string name="desc_about_page">about_page</string>
+    <string name="desc_button_back">button_back</string>
+    <string name="desc_profile_banner">profile_banner</string>
+    <string name="email">Email</string>
+    <string name="azkiajmal_gmail_com">azkiajmal@gmail.com</string>
+    <string name="github">Github</string>
+    <string name="azkifairuz">azkifairuz</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="thanks_for_come_to_my_bio">Thanks For Come To My Bio</string>
 </resources>

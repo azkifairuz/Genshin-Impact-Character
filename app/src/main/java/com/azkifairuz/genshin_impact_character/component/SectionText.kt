@@ -15,6 +15,7 @@ fun SectionText(
 ) {
     Text(
         text = title,
+        color = MaterialTheme.colorScheme.onPrimaryContainer,
         style = MaterialTheme.typography.headlineSmall.copy(
             fontWeight = FontWeight.ExtraBold
         ),

@@ -9,9 +9,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,14 +26,17 @@ import com.azkifairuz.genshin_impact_character.R
 fun Banner(
     modifier: Modifier = Modifier
 ) {
-    
+
     Column() {
-        SectionText(title = stringResource(R.string.the_pretties_character_of_the_year))
+        SectionText(
+            title = stringResource(R.string.the_pretties_character_of_the_year),
+            modifier.padding(16.dp)
+        )
         Card(
             colors = CardDefaults.cardColors(
                 containerColor = MaterialTheme.colorScheme.primaryContainer,
                 contentColor = MaterialTheme.colorScheme.onPrimaryContainer
-            ) ,
+            ),
             modifier = modifier.padding(16.dp)
         ) {
             Image(
@@ -47,16 +48,16 @@ fun Banner(
                     .height(180.dp)
                     .clip(RoundedCornerShape(topStart = 18.dp, topEnd = 18.dp))
             )
-           Column(
-               verticalArrangement = Arrangement.spacedBy(5.dp),
-               modifier = modifier.padding(8.dp)
-           ) {
-               Text(
-                   text = stringResource(R.string.eula_lawrance),
-                   style = MaterialTheme.typography.titleMedium
-               )
-               Text(text = stringResource(R.string.mondstadt))
-           }
+            Column(
+                verticalArrangement = Arrangement.spacedBy(5.dp),
+                modifier = modifier.padding(8.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.eula_lawrance),
+                    style = MaterialTheme.typography.titleMedium
+                )
+                Text(text = stringResource(R.string.mondstadt))
+            }
         }
 
     }
